@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 125%;
+    scroll-behavior: smooth;
+  }
+
+  @media (max-width: 639px) {
+    html {
+      font-size: 100%;
+    }
+  }
+
+  body {
+    @apply bg-white text-neutral-900 dark:bg-[#111110] dark:text-[#eeeeec];
+  }
+}
