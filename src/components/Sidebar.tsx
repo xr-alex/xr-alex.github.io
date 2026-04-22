@@ -35,10 +35,10 @@ interface SidebarProps {
 export function Sidebar({ activeSection, theme, onThemeToggle }: SidebarProps) {
   return (
     <aside className="sticky top-0 z-10 flex flex-col gap-4 border-b border-neutral-100 bg-white px-7 py-5 dark:border-neutral-800 dark:bg-[#111110] sm:h-screen sm:gap-10 sm:border-b-0 sm:border-r sm:py-10">
-      <div className="mx-auto">
+      <div className="ml-auto">
         <ThemeToggle theme={theme} onToggle={onThemeToggle} />
       </div>
-      <div className="flex flex-row flex-wrap items-center gap-4 sm:flex-col sm:items-start sm:gap-10">
+      <div className="flex flex-row flex-wrap items-center justify-between gap-4 sm:flex-col sm:items-start sm:gap-10">
         <div className="">
           <p className="text-[0.9375rem] font-medium leading-snug tracking-tight">
             Alex
@@ -69,29 +69,26 @@ export function Sidebar({ activeSection, theme, onThemeToggle }: SidebarProps) {
             )
           })}
         </nav>
-        <div className="flex flex-col gap-4">
-          <div className="flex flex-row items-center gap-4 sm:mt-auto sm:flex-col sm:items-start sm:gap-4">
-            <div className="flex flex-col flex-wrap gap-3 sm:flex-col sm:gap-2">
-              <a
-                href="https://github.com/xr-alex"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 font-mono text-xs text-neutral-400 no-underline transition-colors hover:text-neutral-900 dark:text-neutral-500 dark:hover:text-[#eeeeec]"
-              >
-                <GithubIcon />
-                github
-              </a>
-              <a
-                href="https://linkedin.com/in/alex-guerreiro"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 font-mono text-xs text-neutral-400 no-underline transition-colors hover:text-neutral-900 dark:text-neutral-500 dark:hover:text-[#eeeeec]"
-              >
-                <LinkedinIcon />
-                linkedin
-              </a>
-            </div>
-          </div>
+
+        <div className="flex flex-col flex-wrap justify-end gap-3 self-stretch sm:flex-col sm:gap-2">
+          <a
+            href="https://github.com/xr-alex"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 font-mono text-xs text-neutral-400 no-underline transition-colors hover:text-neutral-900 dark:text-neutral-500 dark:hover:text-[#eeeeec]"
+          >
+            <GithubIcon />
+            github
+          </a>
+          <a
+            href="https://linkedin.com/in/alex-guerreiro"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 font-mono text-xs text-neutral-400 no-underline transition-colors hover:text-neutral-900 dark:text-neutral-500 dark:hover:text-[#eeeeec]"
+          >
+            <LinkedinIcon />
+            linkedin
+          </a>
         </div>
       </div>
 
